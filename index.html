@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aniagu D Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8e1e9f41a7.js" crossorigin="anonymous"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:"Poppins",sans-serif;background:#0f172a;color:#f1f5f9}
+header{background:#1e293b;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h1{color:#38bdf8;font-size:1.6rem}
+nav a{color:#f1f5f9;margin-left:18px;text-decoration:none;font-weight:500}
+nav a:hover{color:#38bdf8}
+.hero{text-align:center;padding:56px 18px 48px;background:linear-gradient(to right,#0f172a,#1e293b)}
+.hero h2{font-size:2.4rem;color:#38bdf8;margin-bottom:8px}
+.hero p{font-size:1.05rem;color:#e2e8f0;max-width:900px;margin:auto}
+.section{padding:48px 18px;max-width:1100px;margin:auto}
+.section h2{text-align:center;color:#38bdf8;margin-bottom:22px;font-size:1.9rem}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.service-card{background:#1e293b;padding:14px;border-radius:12px;text-align:center;transition:transform .25s,background .25s;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+.service-card:hover{transform:translateY(-6px);background:#334155}
+.service-card img{width:100%;height:190px;object-fit:cover;border-radius:10px;margin-bottom:12px;display:block}
+.about,.vision{line-height:1.8;color:#e2e8f0}
+.contact-section{text-align:center;margin-top:28px}
+.contact-info{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:18px}
+.contact-item{display:flex;align-items:center;background:#1e293b;padding:12px 16px;border-radius:10px;width:92%;max-width:420px;justify-content:center;gap:12px;color:#f1f5f9;text-decoration:none;transition:transform .2s,background .2s}
+.contact-item:hover{background:#334155;transform:translateY(-3px)}
+.contact-item i{font-size:1.2rem;color:#38bdf8}
+footer{text-align:center;padding:18px;background:#1e293b;margin-top:30px}
+footer a{color:#38bdf8;text-decoration:none}
+
+/* Chatbox Styles */
+#chat-container {
+  position:fixed; bottom:20px; right:20px;
+  width:60px; height:60px;
+  border-radius:50%; background:#0d1117;
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  z-index:9999; transition:all .3s; flex-direction:column;
+}
+#chat-container.expanded {
+  width:350px; height:auto; border-radius:10px;
+}
+#chat-avatar {
+  width:40px; height:40px; border-radius:50%;
+  background:url('https://cdn-icons-png.flaticon.com/512/2922/2922506.png') center/cover no-repeat;
+}
+#chat-header {display:none; background:#161b22; padding:10px; font-weight:bold;}
+#chat-container.expanded #chat-header {display:block;}
+#chat-messages {display:none; height:300px; overflow-y:auto; width:100%; background:#0d1117; padding:10px;}
+#chat-container.expanded #chat-messages {display:block;}
+#chat-input-box {display:none; width:100%; border-top:1px solid #222; margin-top:5px;}
+#chat-container.expanded #chat-input-box {display:flex;}
+#chat-input {flex:1; padding:10px; border:none; outline:none; background:#161b22; color:#fff;}
+#chat-send {padding:10px 15px; background:#238636; color:#fff; border:none; cursor:pointer;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Aniagu D Design</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#vision">Vision</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Bringing Ideas to Digital Life</h2>
+  <p>Creative designs, websites & brand solutions tailored for success. Logos, websites, brand identity, social media creatives and print materials — I handle the whole package.</p>
+</section>
+
+<section id="about" class="section about">
+  <h2>About Me</h2>
+  <p>I'm <strong>Aniagu D</strong> — a passionate designer & web developer based in Nigeria. I craft logos, responsive websites and brand visuals that make businesses stand out. I combine creativity and strategy to deliver designs that connect with customers and drive results.</p>
+</section>
+
+<section id="services" class="section">
+  <h2>My Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=900&q=80" alt="Logo Design">
+      <h3>Logo Design</h3>
+      <p>Unique, memorable logos that communicate your brand’s personality and values.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Website Creation">
+      <h3>Website Creation</h3>
+      <p>Responsive, fast, and modern websites built to represent your business professionally.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80" alt="Social Media Design">
+      <h3>Social Media Design</h3>
+      <p>Engaging post templates, stories and ad creatives designed to grow your audience and boost engagement.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Business Cards and Flyers">
+      <h3>Business Cards & Flyers</h3>
+      <p>Professional print-ready materials and business cards that leave a lasting first impression.</p>
+    </div>
+  </div>
+</section>
+
+<section id="vision" class="section vision">
+  <h2>Vision & Mission</h2>
+  <p><strong>Vision:</strong> To be one of Africa’s most innovative creative brands, empowering businesses through design and technology.</p><br>
+  <p><strong>Mission:</strong> To deliver exceptional designs and digital branding that inspire growth and satisfaction for every client.</p>
+</section>
+
+<section id="contact" class="section contact-section">
+  <h2>Contact Me</h2>
+  <div class="contact-info">
+    <a class="contact-item" href="tel:+2349118790779"><i class="fas fa-phone"></i> <div>Call<br>+234 911 879 0779</div></a>
+    <a class="contact-item" href="https://wa.me/2349118790779" target="_blank"><i class="fab fa-whatsapp"></i> <div>WhatsApp<br>Message me</div></a>
+    <a class="contact-item" href="mailto:aniagudavid.designs10@gmail.com"><i class="fas fa-envelope"></i> <div>Email<br>aniagudavid.designs10@gmail.com</div></a>
+    <a class="contact-item" href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> <div>Facebook<br>Message me</div></a>
+  </div>
+
+  <form action="https://formspree.io/f/mrbajage" method="POST" style="margin-top:20px; display:flex; flex-direction:column; gap:12px; max-width:400px; margin:auto;">
+    <input type="text" name="name" placeholder="Your Name" required style="padding:10px; border-radius:5px; border:none;">
+    <input type="email" name="email" placeholder="Your Email" required style="padding:10px; border-radius:5px; border:none;">
+    <input type="text" name="phone" placeholder="Your Phone" required style="padding:10px; border-radius:5px; border:none;">
+    <select name="service" required style="padding:10px; border-radius:5px; border:none;">
+      <option value="">Select a Service</option>
+      <option value="Logo Design">Logo Design</option>
+      <option value="Website Creation">Website Creation</option>
+      <option value="Social Media Design">Social Media Design</option>
+      <option value="Business Cards & Flyers">Business Cards & Flyers</option>
+    </select>
+    <textarea name="message" placeholder="Your Message" rows="4" style="padding:10px; border-radius:5px; border:none;"></textarea>
+    <button type="submit" style="padding:10px; background:#38bdf8; color:#fff; border:none; border-radius:5px; cursor:pointer;">Send Request</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Aniagu D Design. All rights reserved.</p>
+</footer>
+
+<!-- AI Chatbox -->
+<div id="chat-container">
+  <div id="chat-avatar"></div>
+  <div id="chat-header">Chat with Aniagu D</div>
+  <div id="chat-messages"></div>
+  <div id="chat-input-box">
+    <input id="chat-input" type="text" placeholder="Type a message...">
+    <button id="chat-send">Send</button>
+  </div>
+</div>
+
+<script>
+// Chat toggle
+const chatContainer = document.getElementById('chat-container');
+const chatAvatar = document.getElementById('chat-avatar');
+const chatMessages = document.getElementById('chat-messages');
+const chatInputBox = document.getElementById('chat-input-box');
+const chatInput = document.getElementById('chat-input');
+const chatSend = document.getElementById('chat-send');
+const chatHeader = document.getElementById('chat-header');
+
+let expanded = false;
+chatContainer.addEventListener('click', e=>{
+  if(e.target===chatInput || e.target===chatSend) return;
+  expanded=!expanded;
+  chatContainer.classList.toggle('expanded', expanded);
+});
+
+// Chat logic
+let step=0;
+let userData={name:"", location:"", phone:""};
+const services = [
+  "Logo Design: Unique, memorable logos that communicate your brand’s personality and values.",
+  "Website Creation: Responsive, fast, and modern websites built to represent your business professionally.",
+  "Social Media Design: Engaging post templates, stories and ad creatives designed to grow your audience.",
+  "Business Cards & Flyers: Professional print-ready materials that leave a lasting first impression."
+];
+
+function addMessage(sender,msg,isBot=false){
+  const m=document.createElement('div');
+  m.style.margin="5px 0"; m.textContent=sender+": "+msg;
+  m.style.background=isBot?"#161b22":"#238636";
+  m.style.padding="8px 12px"; m.style.borderRadius="10px"; chatMessages.appendChild(m);
+  chatMessages.scrollTop=chatMessages.scrollHeight;
+}
+
+function handleInput(text){
+  if(!text.trim()) return;
+  addMessage("You",text,false);
+  function bot(msg,delay=1000){setTimeout(()=>{addMessage("Aniagu D",msg,true)},delay);}
+  const msg=text.toLowerCase();
+  if(step===0){
+    if(msg.includes("hi")||msg.includes("hello")){bot("Hi! I am Aniagu D chatbox. What is your name?"); step=1;}
+    else bot("Please say 'hello' to start the chat.");
+  } else if(step===1){userData.name=text; bot("Nice to meet you, "+text+"! Where are you located?"); step=2;}
+  else if(step===2){userData.location=text; bot("Got it! Can I have your phone number?"); step=3;}
+  else if(step===3){userData.phone=text; bot("Thank you! Are you looking for a service?"); step=4;}
+  else if(step===4){if(msg.includes("service")){bot("Here are the services I offer:"); services.forEach((s,i)=>bot(s,500*(i+1))); step=5;}else bot("Okay! Let me know if you want any services.");}
+  else bot("Ask about my services or type 'restart' to start over."); if(msg==="restart"){step=0; bot("Chat restarted. Say 'hello' to start!");}
+}
+
+chatSend.addEventListener('click',()=>{handleInput(chatInput.value); chatInput.value='';});
+chatInput.addEventListener('keypress',e=>{if(e.key==="Enter") handleInput(chatInput.value);});
+</script>
+
+</body>
+</html>
