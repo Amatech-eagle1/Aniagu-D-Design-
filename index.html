@@ -1,66 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="LlbIuGkW4nCS_uafF9qa9qLit9E2v6wDV8FTYtX714g" />
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="LlbIuGkW4nCS_uafF9qa9qLit9E2v6wDV8FTYtX714g" />
 <title>Aniagu D Design</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/8e1e9f41a7.js" crossorigin="anonymous"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:"Poppins",sans-serif;background:#0f172a;color:#f1f5f9}
-header{background:#1e293b;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-header h1{color:#38bdf8;font-size:1.6rem}
-nav a{color:#f1f5f9;margin-left:18px;text-decoration:none;font-weight:500}
-nav a:hover{color:#38bdf8}
-.hero{text-align:center;padding:56px 18px 48px;background:linear-gradient(to right,#0f172a,#1e293b)}
-.hero h2{font-size:2.4rem;color:#38bdf8;margin-bottom:8px}
-.hero p{font-size:1.05rem;color:#e2e8f0;max-width:900px;margin:auto}
-.section{padding:48px 18px;max-width:1100px;margin:auto}
-.section h2{text-align:center;color:#38bdf8;margin-bottom:22px;font-size:1.9rem}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.service-card{background:#1e293b;padding:14px;border-radius:12px;text-align:center;transition:transform .25s,background .25s;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
-.service-card:hover{transform:translateY(-6px);background:#334155}
-.service-card img{width:100%;height:190px;object-fit:cover;border-radius:10px;margin-bottom:12px;display:block}
-.about,.vision{line-height:1.8;color:#e2e8f0}
-.contact-section{text-align:center;margin-top:28px}
-.contact-info{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:18px}
-.contact-item{display:flex;align-items:center;background:#1e293b;padding:12px 16px;border-radius:10px;width:92%;max-width:420px;justify-content:center;gap:12px;color:#f1f5f9;text-decoration:none;transition:transform .2s,background .2s}
-.contact-item:hover{background:#334155;transform:translateY(-3px)}
-.contact-item i{font-size:1.2rem;color:#38bdf8}
-footer{text-align:center;padding:18px;background:#1e293b;margin-top:30px}
-footer a{color:#38bdf8;text-decoration:none}
+/* Base styles */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f172a;color:#f1f5f9;overflow-x:hidden;}
 
-/* Chatbox Styles */
-#chat-container {
-  position:fixed; bottom:20px; right:20px;
-  width:60px; height:60px;
-  border-radius:50%; background:#0d1117;
-  cursor:pointer; display:flex; align-items:center; justify-content:center;
-  z-index:9999; transition:all .3s; flex-direction:column;
+/* Header */
+header{text-align:center;padding:100px 20px 50px;}
+.site-title{font-size:5rem;font-weight:900;color:#38bdf8;text-shadow:0 0 20px #38bdf8,0 0 40px #34d399;animation:glow 2.5s ease-in-out infinite alternate;}
+.slogan{margin-top:20px;font-size:2rem;color:#e2e8f0;}
+nav{margin-top:30px;}
+nav a{color:#f1f5f9;margin:0 15px;text-decoration:none;font-weight:600;font-size:1.1rem;transition:0.3s;}
+nav a:hover{color:#38bdf8;}
+@keyframes glow{0%{text-shadow:0 0 20px #38bdf8,0 0 40px #34d399;}50%{text-shadow:0 0 30px #f472b6,0 0 50px #38bdf8;}100%{text-shadow:0 0 20px #facc15,0 0 40px #38bdf8;}}
+
+/* Sections */
+.section{padding:60px 20px;max-width:1100px;margin:auto;}
+.section h2{text-align:center;color:#38bdf8;font-size:2rem;margin-bottom:25px;}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.service-card{background:#1e293b;padding:15px;border-radius:12px;text-align:center;transition:transform 0.25s, box-shadow 0.25s;}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(56,189,248,0.5);}
+.service-card img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:12px;}
+
+/* Contact */
+.contact-info{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:20px;}
+.contact-item{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:10px;background:#1e293b;color:#f1f5f9;text-decoration:none;transition:0.3s;}
+.contact-item img{width:25px;height:25px;}
+.contact-item:hover{background:#334155;}
+form input, form textarea, form select, form button{width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;outline:none;}
+form button{background:#38bdf8;color:#0f172a;cursor:pointer;transition:0.3s;}
+form button:hover{background:#facc15;color:#0f172a;}
+
+/* Footer */
+footer{text-align:center;padding:25px;background:#1e293b;}
+footer .social-links{margin-top:10px;display:flex;justify-content:center;gap:15px;}
+footer .social-links a img{width:30px;height:30px;transition:0.3s;}
+footer .social-links a img:hover{transform:scale(1.2);}
+
+/* Chatbox */
+#chat-container{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#0d1117;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:9999;transition:all .3s;flex-direction:column;}
+#chat-container.expanded{width:350px;height:auto;border-radius:10px;}
+#chat-avatar{width:40px;height:40px;border-radius:50%;background:url('https://cdn-icons-png.flaticon.com/512/2922/2922506.png') center/cover no-repeat;}
+#chat-header{display:none;background:#161b22;padding:10px;font-weight:bold;}
+#chat-container.expanded #chat-header{display:block;}
+#chat-messages{display:none;height:300px;overflow-y:auto;width:100%;background:#0d1117;padding:10px;}
+#chat-container.expanded #chat-messages{display:block;}
+#chat-input-box{display:none;width:100%;border-top:1px solid #222;margin-top:5px;}
+#chat-container.expanded #chat-input-box{display:flex;}
+#chat-input{flex:1;padding:10px;border:none;outline:none;background:#161b22;color:#fff;}
+#chat-send{padding:10px 15px;background:#238636;color:#fff;border:none;cursor:pointer;}
+
+/* Robot Greeting */
+#robot-greeting{
+  position:fixed;
+  bottom:20px;
+  left:-250px;
+  display:flex;
+  align-items:flex-end;
+  gap:10px;
+  opacity:0;
+  z-index:9999;
+  transition:all 1s ease-out;
 }
-#chat-container.expanded {
-  width:350px; height:auto; border-radius:10px;
+#robot-greeting.show{
+  opacity:1;
+  left:20px;
 }
-#chat-avatar {
-  width:40px; height:40px; border-radius:50%;
-  background:url('https://cdn-icons-png.flaticon.com/512/2922/2922506.png') center/cover no-repeat;
+#robot-body{
+  width:60px;
+  height:60px;
+  background:#38bdf8;
+  border-radius:10px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  animation:robot-bounce 1s infinite alternate;
 }
-#chat-header {display:none; background:#161b22; padding:10px; font-weight:bold;}
-#chat-container.expanded #chat-header {display:block;}
-#chat-messages {display:none; height:300px; overflow-y:auto; width:100%; background:#0d1117; padding:10px;}
-#chat-container.expanded #chat-messages {display:block;}
-#chat-input-box {display:none; width:100%; border-top:1px solid #222; margin-top:5px;}
-#chat-container.expanded #chat-input-box {display:flex;}
-#chat-input {flex:1; padding:10px; border:none; outline:none; background:#161b22; color:#fff;}
-#chat-send {padding:10px 15px; background:#238636; color:#fff; border:none; cursor:pointer;}
+/* Antenna */
+#robot-body::before{
+  content:'';
+  width:6px;
+  height:15px;
+  background:#facc15;
+  position:absolute;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:3px;
+}
+/* Eyes */
+.robot-eyes{
+  display:flex;
+  justify-content:space-between;
+  width:50%;
+  margin-bottom:5px;
+}
+.eye{
+  width:10px;
+  height:10px;
+  background:#000;
+  border-radius:50%;
+}
+.robot-mouth{
+  width:20px;
+  height:4px;
+  background:#000;
+  border-radius:2px;
+}
+/* Robot bounce animation */
+@keyframes robot-bounce{0%{transform:translateY(0);}100%{transform:translateY(-5px);}}
+
+/* Speech bubble */
+#robot-speech{
+  background:#1e293b;
+  color:#38bdf8;
+  padding:10px 14px;
+  border-radius:12px;
+  font-weight:600;
+  font-size:0.9rem;
+  box-shadow:0 4px 15px rgba(0,0,0,0.4);
+  max-width:220px;
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Aniagu D Design</h1>
+  <h1 class="site-title">Aniagu D Design</h1>
+  <p class="slogan">Bringing Ideas to Digital Life</p>
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -69,14 +144,9 @@ footer a{color:#38bdf8;text-decoration:none}
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Bringing Ideas to Digital Life</h2>
-  <p>Creative designs, websites & brand solutions tailored for success. Logos, websites, brand identity, social media creatives and print materials — I handle the whole package.</p>
-</section>
-
 <section id="about" class="section about">
   <h2>About Me</h2>
-  <p>I'm <strong>Aniagu D</strong> — a passionate designer & web developer based in Nigeria. I craft logos, responsive websites and brand visuals that make businesses stand out. I combine creativity and strategy to deliver designs that connect with customers and drive results.</p>
+  <p>I'm <strong>Aniagu D</strong> — a passionate designer & web developer based in Nigeria. I craft logos, responsive websites, and brand visuals that make businesses stand out.</p>
 </section>
 
 <section id="services" class="section">
@@ -107,40 +177,48 @@ footer a{color:#38bdf8;text-decoration:none}
 
 <section id="vision" class="section vision">
   <h2>Vision & Mission</h2>
-  <p><strong>Vision:</strong> To be one of Africa’s most innovative creative brands, empowering businesses through design and technology.</p><br>
+  <p><strong>Vision:</strong> To be one of Africa’s most innovative creative brands, empowering businesses through design and technology.</p>
   <p><strong>Mission:</strong> To deliver exceptional designs and digital branding that inspire growth and satisfaction for every client.</p>
 </section>
 
 <section id="contact" class="section contact-section">
   <h2>Contact Me</h2>
   <div class="contact-info">
-    <a class="contact-item" href="tel:+2349118790779"><i class="fas fa-phone"></i> <div>Call<br>+234 911 879 0779</div></a>
-    <a class="contact-item" href="https://wa.me/2349118790779" target="_blank"><i class="fab fa-whatsapp"></i> <div>WhatsApp<br>Message me</div></a>
-    <a class="contact-item" href="mailto:aniagudavid.designs10@gmail.com"><i class="fas fa-envelope"></i> <div>Email<br>aniagudavid.designs10@gmail.com</div></a>
-    <a class="contact-item" href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> <div>Facebook<br>Message me</div></a>
+    <a class="contact-item" href="tel:+2349118790779"><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone"> +234 911 879 0779</a>
+    <a class="contact-item" href="https://wa.me/2349118790779" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> WhatsApp</a>
+    <a class="contact-item" href="mailto:aniagudavid.designs10@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email"> Email</a>
+    <a class="contact-item" href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"> Facebook</a>
+    <a class="contact-item" href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> Instagram</a>
+    <a class="contact-item" href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube</a>
   </div>
 
-  <form action="https://formspree.io/f/mrbajage" method="POST" style="margin-top:20px; display:flex; flex-direction:column; gap:12px; max-width:400px; margin:auto;">
-    <input type="text" name="name" placeholder="Your Name" required style="padding:10px; border-radius:5px; border:none;">
-    <input type="email" name="email" placeholder="Your Email" required style="padding:10px; border-radius:5px; border:none;">
-    <input type="text" name="phone" placeholder="Your Phone" required style="padding:10px; border-radius:5px; border:none;">
-    <select name="service" required style="padding:10px; border-radius:5px; border:none;">
+  <form action="https://formspree.io/f/mrbajage" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Your Phone" required>
+    <select name="service" required>
       <option value="">Select a Service</option>
       <option value="Logo Design">Logo Design</option>
       <option value="Website Creation">Website Creation</option>
       <option value="Social Media Design">Social Media Design</option>
       <option value="Business Cards & Flyers">Business Cards & Flyers</option>
     </select>
-    <textarea name="message" placeholder="Your Message" rows="4" style="padding:10px; border-radius:5px; border:none;"></textarea>
-    <button type="submit" style="padding:10px; background:#38bdf8; color:#fff; border:none; border-radius:5px; cursor:pointer;">Send Request</button>
+    <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+    <button type="submit">Send Request</button>
   </form>
 </section>
 
 <footer>
   <p>© 2025 Aniagu D Design. All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+    <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    <a href="https://wa.me/2349118790779" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+  </div>
 </footer>
 
-<!-- AI Chatbox -->
+<!-- Chatbox -->
 <div id="chat-container">
   <div id="chat-avatar"></div>
   <div id="chat-header">Chat with Aniagu D</div>
@@ -150,6 +228,21 @@ footer a{color:#38bdf8;text-decoration:none}
     <button id="chat-send">Send</button>
   </div>
 </div>
+
+<!-- Robot Greeting -->
+<div id="robot-greeting">
+  <div id="robot-body">
+    <div class="robot-eyes">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+    </div>
+    <div class="robot-mouth"></div>
+  </div>
+  <div id="robot-speech">Welcome to Aniagu D Design website!</div>
+</div>
+
+<!-- Robot Sound -->
+<audio id="robot-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
 
 <script>
 // Chat toggle
@@ -182,7 +275,9 @@ function addMessage(sender,msg,isBot=false){
   const m=document.createElement('div');
   m.style.margin="5px 0"; m.textContent=sender+": "+msg;
   m.style.background=isBot?"#161b22":"#238636";
-  m.style.padding="8px 12px"; m.style.borderRadius="10px"; chatMessages.appendChild(m);
+  m.style.padding="8px 12px";
+  m.style.borderRadius="10px";
+  chatMessages.appendChild(m);
   chatMessages.scrollTop=chatMessages.scrollHeight;
 }
 
@@ -198,11 +293,23 @@ function handleInput(text){
   else if(step===2){userData.location=text; bot("Got it! Can I have your phone number?"); step=3;}
   else if(step===3){userData.phone=text; bot("Thank you! Are you looking for a service?"); step=4;}
   else if(step===4){if(msg.includes("service")){bot("Here are the services I offer:"); services.forEach((s,i)=>bot(s,500*(i+1))); step=5;}else bot("Okay! Let me know if you want any services.");}
-  else bot("Ask about my services or type 'restart' to start over."); if(msg==="restart"){step=0; bot("Chat restarted. Say 'hello' to start!");}
+  else bot("Ask about my services or type 'restart' to start over."); 
+  if(msg==="restart"){step=0; bot("Chat restarted. Say 'hello' to start!");}
 }
 
 chatSend.addEventListener('click',()=>{handleInput(chatInput.value); chatInput.value='';});
 chatInput.addEventListener('keypress',e=>{if(e.key==="Enter") handleInput(chatInput.value);});
+
+// Robot greeting animation with sound
+window.addEventListener('load', () => {
+  const robot = document.getElementById('robot-greeting');
+  const sound = document.getElementById('robot-sound');
+  setTimeout(() => {
+    robot.classList.add('show');
+    sound.play();
+  }, 1000);
+  setTimeout(() => { robot.classList.remove('show'); }, 31000);
+});
 </script>
 
 </body>
