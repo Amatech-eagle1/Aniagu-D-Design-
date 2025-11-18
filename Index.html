@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Page</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+<script src="firebase-config.js"></script>
+</head>
+<body style="display:none;">
+<h1>Welcome to the Protected Page!</h1>
+<button id="logoutBtn">Logout</button>
+
+<script>
+  // Show page only if user is logged in
+  auth.onAuthStateChanged(user => {
+    if(!user){
+      window.location.href = "login.html"; // redirect if not logged in
+    } else {
+      document.body.style.display = "block"; // show page
+    }
+  });
+
+  // Logout button
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    auth.signOut().then(() => window.location.href = "login.html");
+  });
+</script>
+</body>
+</html>
